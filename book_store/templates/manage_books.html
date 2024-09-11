@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Books</title>
+</head>
+<body>
+    <h1>Manage Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }} - Status: {% if book.is_rented %}Rented{% else %}Available{% endif %}</li>
+        {% endfor %}
+    </ul>
+</body>
+    

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remind Users</title>
+</head>
+<body>
+    <h1>Overdue Rents</h1>
+    <ul>
+        {% for rent in overdue_rents %}
+            <li>User: {{ rent.user_profile.user.username }} - Book: {{ rent.book.title }} - Return Date: {{ rent.return_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
